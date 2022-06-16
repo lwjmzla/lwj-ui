@@ -1,0 +1,159 @@
+@import "./common/theme.scss";
+$nums: 1, 2, 5, 8, 10, 15, 20;
+
+.ml-1, .ml-2, .ml-5, .ml-8, .ml-10, .ml-15, .ml-20,
+.mr-1, .mr-2, .mr-5, .mr-8, .mr-10, .mr-15, .mr-20,
+.mt-1, .mt-2, .mt-5, .mt-8, .mt-10, .mt-15, .mt-20,
+.mb-1, .mb-2, .mb-5, .mb-8, .mb-10, .mb-15, .mb-20,
+.pl-1, .pl-2, .pl-5, .pl-8, .pl-10, .pl-15, .pl-20,
+.pr-1, .pr-2, .pr-5, .pr-8, .pr-10, .pr-15, .pr-20,
+.pt-1, .pt-2, .pt-5, .pt-8, .pt-10, .pt-15, .pt-20,
+.pb-1, .pb-2, .pb-5, .pb-8, .pb-10, .pb-15, .pb-20,
+{
+}
+
+@each $num in $nums {
+
+  @each $key, $name in ((ml, margin-left), (mr, margin-right), (mt, margin-top), (mb, margin-bottom)) {
+    .#{$key}-#{$num} {
+      #{$name}: #{$num}px;
+    }
+  }
+  @each $key, $name in ((pl, padding-left), (pr, padding-right), (pt, padding-top), (pb, padding-bottom)) {
+    .#{$key}-#{$num} {
+      #{$name}: #{$num}px;
+    }
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #app {
+  width: 100%;
+  height: 100%;
+}
+
+#app {
+  padding: 0.1px;
+}
+
+.rel {
+  position: relative;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.flex-auto {
+  flex: auto;
+}
+
+.flex-inline {
+  display: inline-flex;
+}
+
+.flex-center-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex-center-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bps-form-for-line-format-style {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+
+  .el-form-item__content {
+    display: flex;
+  }
+
+  .form-inline-width-33 {
+    display: inline-flex;
+    margin-right: 1%;
+    width: 32.33%;
+    max-width: 440px;
+  }
+
+  @media only screen and (max-width: 1200px) {
+    .form-inline-width-33 {
+      width: 49%;
+    }
+  }
+
+  @media only screen and (max-width: 830px) {
+    .form-inline-width-33 {
+      width: 45%;
+    }
+  }
+
+  @media only screen and (max-width: 820px) {
+    .form-inline-width-33 {
+      width: 100%;
+    }
+  }
+}
+
+.order-radio-group-hidden-border {
+  .el-radio-button__inner {
+    border-color: transparent !important;
+    border: 0;
+    border-radius: 4px;
+  }
+}
+
+.cover-space-20{
+  height: 20px;
+}
+
+.demo-block {
+  table{
+    margin: auto;
+  }
+  th, td{
+    border: none;
+    border-right: var(--el-table-border);
+    border-bottom: var(--el-table-border);
+  }
+  div[class*='language-'].line-numbers-mode {
+    padding-left: 0px;
+  }
+}
+
+.el-date-picker{
+  tr{
+    border-top: none;
+  }
+  th, td {
+    border: none;
+  }
+  td{
+    width: 42px;
+  }
+  tr:nth-child(2n){
+    background-color: transparent;
+  }
+}
+
+body {
+  a {
+    text-decoration: none;
+    font-weight: 500;
+    color: $--color-primary;
+  }
+}

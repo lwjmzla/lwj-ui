@@ -1,0 +1,41 @@
+// // 当前版本1.0.2-beta.71
+// @forward 'element-plus/packages/theme-chalk/src/var.scss' with (
+//   $--colors: (
+//     'primary': (
+//       'base': #409eff,
+//     ),
+//     'success': (
+//       'base': #67c23a,
+//     ),
+//     'warning': (
+//       'base': #e6a23c,
+//     ),
+//     'danger': (
+//       'base': #f56c6c,
+//     ),
+//     'error': (
+//       'base': #f56c6c,
+//     ),
+//     'info': (
+//       'base': #909399,
+//     ),
+//   ),
+// );
+
+// 最新版本
+@forward 'element-plus/theme-chalk/src/common/var.scss'with (
+  $colors: (
+    'primary': ('base': #409eff,
+    ),
+    'success': ('base': #67c23a,
+    ),
+    'warning': ('base': #e6a23c,
+    ),
+    'danger': ('base': #f56c6c,
+    ),
+    'error': ('base': #f56c6c,
+    ),
+    'info': ('base': #909399,
+    ),
+  ),
+);

@@ -1,0 +1,33 @@
+@import "./common/theme.scss";
+
+.#{$prefix} {
+  &-empty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    &.center {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+    }
+    .bbui-empty-box {
+      display: block;
+      text-align: center;
+    }
+    .bbui-empty-img {
+      display: block;
+      margin: 0 auto;
+      width: 90px;
+    }
+    .bbui-empty-text {
+      margin-top: 16px;
+      font-size: 14px;
+      text-align: center;
+      color: rgba(0,0,0,.25);
+    }
+  }
+}
